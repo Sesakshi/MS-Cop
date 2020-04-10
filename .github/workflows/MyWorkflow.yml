@@ -1,0 +1,16 @@
+
+name: Invoking Powershell script
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+build
+
+    runs-on: Windows 10
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: .\MS-Cop\install.ps1
+      shell: powershell
